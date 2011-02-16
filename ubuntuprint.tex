@@ -1,0 +1,40 @@
+\documentclass[12pt, letter]{article}
+\special{papersize=8.5in,11in}
+\usepackage[cm]{fullpage}
+\title{Print from a PC running Ubuntu 10.04 Linux}
+\date{}
+\author{}
+\begin{document}
+\maketitle
+From a PC running Ubuntu Linux, you can print to RPI printers through Samba. (Note that to use private printers, you must have appropriate permissions.)
+\section{Install Samba}
+Open a terminal and type \texttt{sudo apt-get install samba4}
+\section{Samba Configuration}
+Hit \emph{Alt + F2}. A window should pop up asking for a command. Type in \texttt{gksu gedit /etc/samba/smb.conf} and click run. A text editor should launch with the configuration file open. If it does not open, hit \emph{Alt + F2} and try again, sometimes it works on the second try. 
+
+Scroll down to the \texttt{\#\#\#\#\#\# Authentication \#\#\#\#\#\#} section and find the line that says \texttt{encrypt passwords = yes}. Below this line you need to add 2 lines: 
+\begin{itemize}
+\item \texttt{client plaintext auth = yes}
+\item \texttt{client lanman auth = yes}
+\end{itemize}
+Now save the file and restart your computer.
+\section{Printer Configuration}
+\begin{enumerate}
+\item At the top of your screen go to \emph{System $\rightarrow$ Administration $\rightarrow$ Printing}. 
+\item A printer manager window should pop up. Click \emph{Add} to get the Add Printer Dialog. 
+\item Expand \texttt{Network Printer} by clicking the plus sign next to it, and select \texttt{Windows Printer Via SAMBA}. 
+\item In the text box labeled \texttt{smb://} and type in the box \texttt{sambasrv.rpi.edu/} and then hit the \emph{Browse...} button. 
+\item A list of RPI printers should pop up. Select the printer you wish to print to and hit \emph{OK}. 
+\item In the {\bf Authentication} section, select \texttt{Set authentication details now}. 
+\item Put in your RCS Username and password in the boxes below and click \emph{Verify...} to confirm that they work.
+\item Now click \emph{Forward}. It should search for print drivers and bring you to a list of printer manufacturers. 
+\item Select \texttt{Generic} from the list and click \emph{Forward}. 
+\item In the \texttt{Models} column choose \texttt{PostScript Printer} and leave \texttt{Generic PostScript Printer [en] (recommended)} selected in the \texttt{Drivers} column. 
+\item Now click \emph{Forward}.
+\item Choose a name that appropriately describes the printer you just installed.
+\item (OPTIONAL) You may also enter a Description and Location.
+\item Click \emph{Apply}. 
+\item When it asks if you would like to print a test page, you can click either \emph{Yes} or \emph{No} but you will be charged at a normal rate for test pages.
+\end{enumerate}
+You now should be able to print from this printer. Please note that not all printers will work with the generic drivers, but the large majority of them will.
+\end{document}

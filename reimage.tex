@@ -1,0 +1,74 @@
+%latex comments look like this
+\documentclass[10pt]{article}
+\special{papersize=8.5in,11in}
+\usepackage[cm]{fullpage}
+%\usepackage{titlesec}
+%\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+%\titleformat{\subsection}{\normalsize\bfseries}{\thesection}{1em}{}
+\begin{document}
+\begin{flushright}
+Re-image Instructions \today
+\end{flushright}
+\section{Copying the Image (must complete at the VCC)}
+{\sc WARNING This will erase all data on your computer. Please back up your stuff.}
+\begin{enumerate}
+\item Please check the {\bf Image List} posted near Switch B for the version of Windows you want.
+\item Plug in your laptop and Connect it to the switch labeled ``Switch B''. Do not use a retractable ethernet cord.
+\item Turn on the laptop and press \emph{F12} immediately when the ThinkVantage screen appears
+\item Insert the re-image CD and press the option with the words ``CD'' or ``ATAPI''
+\item When asked for operating system you want to install, type in either ``xp'', ``w7'', or ``w764bit''. and press \emph{Enter}. If you're not sure which to chose, consult with a consultant.
+\begin{description}
+\item[w7:] This is a 32-bit version of windows. This version will be compatible with everything and is recommended if you have a model older than the w500 like the {\bf T61} and {\bf T61p}.
+\item[w764bit:] This is a 64-bit version of windows. This is recommended for anyone with a {\bf w500}, {\bf t410}, or newer.
+\end{description}
+\item If asked for image type, type in either ``base'' or ``full'' and press \emph{Enter}. If no option is displayed, the base image is the only one available.
+\begin{description}
+\item[Base:] Operating System, Drivers, Antivirus, and Microsoft Office
+\item[Full:] Base + all software included in mobile computing package
+\end{description}
+\item A blue screen with a progress bar will appear. When the progress bar reaches 100\% follow the on-screen instructions and press ``Okay''. Your computer will shutdown on its own, albeit slowly. It will not restart on its own.
+\item Return the CD, and Network Cable to the helpdesk consultants. Don't forget to receive your RPI ID.
+\item If you are using a T60 or newer and installed {\bf XP}, you \emph{must} do the following (Otherwise skip to \emph{Updates}):
+\begin{enumerate} %begin T60 specific instructions
+\item Turn on the computer, and immediately press \emph{F1} during the ThinkVantage screen. This will bring up the BIOS options.
+\item Hit enter to choose the ``Config'' option, and then choose ``Serial ATA (SATA)''
+\item Press enter to select modes: {\bf AHCI} for Windows 7, {\bf Compatibility} for XP
+\item Press the \emph{F10} key, press \emph{Enter} at confirmation, and the computer will restart.
+\end{enumerate} %end T60 specific instructions
+\end{enumerate}
+
+%\section{Initial set-up (should complete in the VCC)}
+%\subsection{For Vista and Windows 7 Users:}
+%\begin{enumerate}
+%\item Agree to the term.
+%\item Choose a username and password.
+%\item Set the date.
+%\item Unselect the ``Peace of Mind'' option.
+%\end{enumerate}
+
+%\subsection{For XP Users:}
+%\begin{enumerate}
+%\item Agree to the terms.
+%\item Set your time-zone and language.
+%\item Enter your name and organization (whatever you want).
+%\item Enter a computer name, and choose an admin password. Do not forget this password.
+%\item Continue hitting next until prompted for a Workground, and type in ``RENSSELAER''.
+%\item Once logged in, create a new user account by going to Start $\rightarrow$ Control Panel $\rightarrow$ User Accounts $\rightarrow$ Create a new account. At this point, log off, and log back in with the new account.
+%\end{enumerate}
+
+\section{Updates (can complete at home, but please return these instructions)}
+\begin{enumerate}
+\item Update Symantec Antivirus by right-clicking its icon in the System Tray, and proceeding with the LiveUpdate program.
+\item Run Windows Updates by visiting http://windowsupdate.microsoft.com
+\end{enumerate}
+\subsection{{\sc optional} Enable Aero Theme for Windows 7}
+By default the image keeps all visual effects off, which makes Windows 7 look like Windows ME. To enable Aero:
+Right click on desktop $\rightarrow$ Personalize $\rightarrow$ Windows 7 Basic
+%\begin{enumerate}
+%\item Right click on the desktop
+%\item go to Personalize at the bottom of the list.
+%\item Select a new theme like \emph{Windows 7 Basic}
+%\end{enumerate}
+\section{Please return these instructions to the helpdesk!}
+\emph{Unless these instructions are taped down, in which case, please leave them undisturbed.}
+\end{document}
